@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
-Route::get('/contact', [ContactController::class, 'create']);
+Route::get('/contact', [ContactController::class, 'create'])->name('contact');
 Route::post('/contact', [ContactController::class, 'confirm']);
+
+Route::get('/privacy-policy', function() {
+    return view('privacy-policy');
+})->name('privacy');

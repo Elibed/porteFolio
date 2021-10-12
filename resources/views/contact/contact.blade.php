@@ -1,4 +1,5 @@
 @extends('contact')
+
 @section('body')
     <br>
     <div class="container">
